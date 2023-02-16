@@ -10,7 +10,12 @@ class EventPractice extends Component {
     this.setState({[e.target.name]: e.target.value});
   }
   handleClick = () => {
-    alert(this.state.username + ': ' + this.state.message);
+    const {username, message} = this.state
+    if (username === '' && message === '') {
+      alert('사용자명과 내용을 입력해주세요.');
+      return;
+    }
+    alert(username + ': ' + message);
     this.setState({
       username: '',
       message: ''
