@@ -32,6 +32,8 @@ class MyComponent extends Component {
 
   render() {
     const { name, favoriteNumber, children } = this.props;
+    // console.log(this.props);
+    // console.log(typeof children);
     return (
       <div>
         안녕하세요, 제 이름은 {name}입니다. <br />
